@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProjectsApp.API.Data;
+using ProjectsApp.API.Models;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -22,6 +23,24 @@ public class AuthController : ControllerBase
         _repo = repo;
         _config = config;
         _mapper = mapper;
+    }
+
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
+    {
+        userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
+
+        if (await _repo.UserExists(userForRegisterDto.Username))
+            return BadRequest("Username already exists");
+
+        var userToCreate = _mapper.Map<User>(userForRegisterDto);
+
+        var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);
+
+        var userToReturn = _mapper.Map<UserForDetailedDto>(createdUser);
+        
+        return CreatedAtRoute("GetUser", new { controller = "Users",
+             id = createdUser.Id }, userToReturn);
     }
 
     [HttpPost("login")]
@@ -62,6 +81,4 @@ public class AuthController : ControllerBase
             user
         });
     }
-
-
 }
