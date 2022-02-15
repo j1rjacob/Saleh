@@ -1,0 +1,731 @@
+<div class="nk-app-root">
+  <!-- main @s -->
+  <div class="nk-main ">
+    <!-- sidebar @s -->
+    <div class="nk-sidebar nk-sidebar-fixed is-dark " data-content="sidebarMenu">
+        <div class="nk-sidebar-element nk-sidebar-head">
+            <div class="nk-menu-trigger">
+                <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em class="icon ni ni-arrow-left"></em></a>
+                <a href="#" class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+            </div>
+            <div class="nk-sidebar-brand">
+                <!-- <a href="html/index.html" class="logo-link nk-sidebar-logo">
+                    <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
+                    <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                </a> -->
+            </div>
+        </div><!-- .nk-sidebar-element -->
+        <div class="nk-sidebar-element nk-sidebar-body">
+            <div class="nk-sidebar-content">
+                <div class="nk-sidebar-menu" data-simplebar>
+                    <ul class="nk-menu">
+
+                        <li class="nk-menu-heading">
+                            <h6 class="overline-title text-primary-alt">Dashboards</h6>
+                        </li><!-- .nk-menu-item -->
+
+                        <li class="nk-menu-item">
+                            <a href="html/index-analytics.html" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-growth"></em></span>
+                                <span class="nk-menu-text">Analytics Dashboard</span>
+                            </a>
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item">
+                            <a href="html/index-invest.html" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-coins"></em></span>
+                                <span class="nk-menu-text">Financial Dashboard</span>
+                            </a>
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-heading">
+                            <!-- <h6 class="overline-title text-primary-alt">Pre-Built Pages</h6> -->
+                        </li><!-- .nk-menu-heading -->
+                        <li class="nk-menu-item has-sub">
+                            <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-tile-thumb"></em></span>
+                                <span class="nk-menu-text">Projects</span>
+                            </a>
+                            <ul class="nk-menu-sub">
+                                <li class="nk-menu-item">
+                                    <a href="html/project-card.html" class="nk-menu-link"><span class="nk-menu-text">Project Cards</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/project-list.html" class="nk-menu-link"><span class="nk-menu-text">Project List</span></a>
+                                </li>
+                            </ul><!-- .nk-menu-sub -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item has-sub">
+                            <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                <span class="nk-menu-text">User Manage</span>
+                            </a>
+                            <ul class="nk-menu-sub">
+                                <li class="nk-menu-item">
+                                    <a href="html/user-list-regular.html" class="nk-menu-link"><span class="nk-menu-text">User List - Regular</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/user-list-compact.html" class="nk-menu-link"><span class="nk-menu-text">User List - Compact</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/user-details-regular.html" class="nk-menu-link"><span class="nk-menu-text">User Details - Regular</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/user-profile-regular.html" class="nk-menu-link"><span class="nk-menu-text">User Profile - Regular</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/user-card.html" class="nk-menu-link"><span class="nk-menu-text">User Contact - Card</span></a>
+                                </li>
+                            </ul><!-- .nk-menu-sub -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item has-sub">
+                            <!-- <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-file-docs"></em></span>
+                                <span class="nk-menu-text">AML / KYCs</span>
+                            </a>
+                            <ul class="nk-menu-sub">
+                                <li class="nk-menu-item">
+                                    <a href="html/kyc-list-regular.html" class="nk-menu-link"><span class="nk-menu-text">KYC List - Regular</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/kyc-details-regular.html" class="nk-menu-link"><span class="nk-menu-text">KYC Details - Regular</span></a>
+                                </li>
+                            </ul> -->
+                            <!-- .nk-menu-sub -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item has-sub">
+                            <!-- <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-tranx"></em></span>
+                                <span class="nk-menu-text">Transactions</span>
+                            </a>
+                            <ul class="nk-menu-sub">
+                                <li class="nk-menu-item">
+                                    <a href="html/transaction-basic.html" class="nk-menu-link"><span class="nk-menu-text">Tranx List - Basic</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/transaction-crypto.html" class="nk-menu-link"><span class="nk-menu-text">Tranx List - Crypto</span></a>
+                                </li>
+                            </ul> -->
+                            <!-- .nk-menu-sub -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item has-sub">
+                            <!-- <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-grid-alt"></em></span>
+                                <span class="nk-menu-text">Applications</span>
+                            </a>
+                            <ul class="nk-menu-sub">
+                                <li class="nk-menu-item">
+                                    <a href="html/apps-messages.html" class="nk-menu-link"><span class="nk-menu-text">Messages</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/apps-inbox.html" class="nk-menu-link"><span class="nk-menu-text">Inbox / Mail</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/apps-file-manager.html" class="nk-menu-link"><span class="nk-menu-text">File Manager</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/apps-chats.html" class="nk-menu-link"><span class="nk-menu-text">Chats / Messenger</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/apps-calendar.html" class="nk-menu-link"><span class="nk-menu-text">Calendar</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/apps-kanban.html" class="nk-menu-link"><span class="nk-menu-text">Kanban Board</span></a>
+                                </li>
+                            </ul> -->
+                            <!-- .nk-menu-sub -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item has-sub">
+                            <!-- <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-file-docs"></em></span>
+                                <span class="nk-menu-text">Invoice</span>
+                            </a>
+                            <ul class="nk-menu-sub">
+                                <li class="nk-menu-item">
+                                    <a href="html/invoice-list.html" class="nk-menu-link"><span class="nk-menu-text">Invoice List</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/invoice-details.html" class="nk-menu-link"><span class="nk-menu-text">Invoice Details</span></a>
+                                </li>
+                            </ul> -->
+                            <!-- .nk-menu-sub -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item has-sub">
+                            <!-- <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-card-view"></em></span>
+                                <span class="nk-menu-text">Products</span>
+                            </a>
+                            <ul class="nk-menu-sub">
+                                <li class="nk-menu-item">
+                                    <a href="html/product-list.html" class="nk-menu-link"><span class="nk-menu-text">Product List</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/product-card.html" class="nk-menu-link"><span class="nk-menu-text">Product Card</span></a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="html/product-details.html" class="nk-menu-link"><span class="nk-menu-text">Product Details</span></a>
+                                </li>
+                            </ul> -->
+                            <!-- .nk-menu-sub -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item">
+                            <!-- <a href="html/pricing-table.html" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-view-col"></em></span>
+                                <span class="nk-menu-text">Pricing Table</span>
+                            </a> -->
+                        </li><!-- .nk-menu-item -->
+                        <li class="nk-menu-item">
+                            <!-- <a href="html/gallery.html" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-img"></em></span>
+                                <span class="nk-menu-text">Image Gallery</span>
+                            </a> -->
+                        </li><!-- .nk-menu-item -->
+                        <!-- <li class="nk-menu-heading">
+                            <h6 class="overline-title text-primary-alt">Misc Pages</h6>
+                        </li> -->
+                        <!-- .nk-menu-heading -->
+
+                        <li class="nk-menu-heading">
+                            <!-- <h6 class="overline-title text-primary-alt">Components</h6> -->
+                        </li><!-- .nk-menu-heading -->
+                        <li class="nk-menu-item has-sub">
+                            <!-- <a href="#" class="nk-menu-link nk-menu-toggle">
+                                <span class="nk-menu-icon"><em class="icon ni ni-layers"></em></span>
+                                <span class="nk-menu-text">Ui Elements</span>
+                            </a> -->
+                        </li><!-- .nk-menu-item -->
+
+                    </ul><!-- .nk-menu -->
+                </div><!-- .nk-sidebar-menu -->
+            </div><!-- .nk-sidebar-content -->
+        </div><!-- .nk-sidebar-element -->
+    </div>
+    <!-- sidebar @e -->
+    <!-- wrap @s -->
+    <div class="nk-wrap ">
+        <!-- main header @s -->
+        <div class="nk-header nk-header-fixed is-light">
+            <div class="container-fluid">
+                <div class="nk-header-wrap">
+                    <div class="nk-menu-trigger d-xl-none ml-n1">
+                        <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+                    </div>
+                    <div class="nk-header-brand d-xl-none">
+                        <!-- <a href="html/index.html" class="logo-link">
+                            <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
+                            <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                        </a> -->
+                    </div><!-- .nk-header-brand -->
+                    <div class="nk-header-news d-none d-xl-block">
+                        <div class="nk-news-list">
+                            <a class="nk-news-item" href="#">
+                                <!-- <div class="nk-news-icon">
+                                    <em class="icon ni ni-card-view"></em>
+                                </div> -->
+                                <!-- <div class="nk-news-text">
+                                    <p>Do you know the latest update of 2022? <span> A overview of our is now available on YouTube</span></p>
+                                    <em class="icon ni ni-external"></em>
+                                </div> -->
+                            </a>
+                        </div>
+                    </div><!-- .nk-header-news -->
+                    <div class="nk-header-tools">
+                        <ul class="nk-quick-nav">
+                            <li class="dropdown language-dropdown d-none d-sm-block mr-n1">
+                                <!-- <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-toggle="dropdown">
+                                    <div class="quick-icon border border-light">
+                                        <img class="icon" src="./images/flags/english-sq.png" alt="">
+                                    </div>
+                                </a> -->
+                                <!-- <div class="dropdown-menu dropdown-menu-right dropdown-menu-s1">
+                                    <ul class="language-list">
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <img src="./images/flags/english.png" alt="" class="language-flag">
+                                                <span class="language-name">English</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <img src="./images/flags/spanish.png" alt="" class="language-flag">
+                                                <span class="language-name">Español</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <img src="./images/flags/french.png" alt="" class="language-flag">
+                                                <span class="language-name">Français</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <img src="./images/flags/turkey.png" alt="" class="language-flag">
+                                                <span class="language-name">Türkçe</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                            </li><!-- .dropdown -->
+                            <li class="dropdown user-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <div class="user-toggle">
+                                        <div class="user-avatar sm">
+                                            <em class="icon ni ni-user-alt"></em>
+                                        </div>
+                                        <div class="user-info d-none d-md-block">
+                                            <div class="user-status">Administrator</div>
+                                            <div class="user-name dropdown-indicator">Junar Jacob</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1">
+                                    <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
+                                        <div class="user-card">
+                                            <div class="user-avatar">
+                                                <span>AB</span>
+                                            </div>
+                                            <div class="user-info">
+                                                <span class="lead-text">Junar Jacob</span>
+                                                <span class="sub-text">junarjacob@yahoo.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-inner">
+                                        <ul class="link-list">
+                                            <li><a href="html/user-profile-regular.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                            <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
+                                            <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+                                            <li><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-inner">
+                                        <ul class="link-list">
+                                            <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li><!-- .dropdown -->
+                            <li class="dropdown notification-dropdown mr-n1">
+                                <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-toggle="dropdown">
+                                    <div class="icon-status icon-status-info"><em class="icon ni ni-bell"></em></div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right dropdown-menu-s1">
+                                    <div class="dropdown-head">
+                                        <span class="sub-title nk-dropdown-title">Notifications</span>
+                                        <a href="#">Mark All as Read</a>
+                                    </div>
+                                    <div class="dropdown-body">
+                                        <div class="nk-notification">
+                                            <div class="nk-notification-item dropdown-inner">
+                                                <div class="nk-notification-icon">
+                                                    <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
+                                                </div>
+                                                <div class="nk-notification-content">
+                                                    <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
+                                                    <div class="nk-notification-time">2 hrs ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="nk-notification-item dropdown-inner">
+                                                <div class="nk-notification-icon">
+                                                    <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
+                                                </div>
+                                                <div class="nk-notification-content">
+                                                    <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
+                                                    <div class="nk-notification-time">2 hrs ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="nk-notification-item dropdown-inner">
+                                                <div class="nk-notification-icon">
+                                                    <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
+                                                </div>
+                                                <div class="nk-notification-content">
+                                                    <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
+                                                    <div class="nk-notification-time">2 hrs ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="nk-notification-item dropdown-inner">
+                                                <div class="nk-notification-icon">
+                                                    <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
+                                                </div>
+                                                <div class="nk-notification-content">
+                                                    <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
+                                                    <div class="nk-notification-time">2 hrs ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="nk-notification-item dropdown-inner">
+                                                <div class="nk-notification-icon">
+                                                    <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
+                                                </div>
+                                                <div class="nk-notification-content">
+                                                    <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
+                                                    <div class="nk-notification-time">2 hrs ago</div>
+                                                </div>
+                                            </div>
+                                            <div class="nk-notification-item dropdown-inner">
+                                                <div class="nk-notification-icon">
+                                                    <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
+                                                </div>
+                                                <div class="nk-notification-content">
+                                                    <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
+                                                    <div class="nk-notification-time">2 hrs ago</div>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-notification -->
+                                    </div><!-- .nk-dropdown-body -->
+                                    <div class="dropdown-foot center">
+                                        <a href="#">View All</a>
+                                    </div>
+                                </div>
+                            </li><!-- .dropdown -->
+                        </ul><!-- .nk-quick-nav -->
+                    </div><!-- .nk-header-tools -->
+                </div><!-- .nk-header-wrap -->
+            </div><!-- .container-fliud -->
+        </div>
+        <!-- main header @e -->
+        <!-- content @s -->
+        <div class="nk-content ">
+            <div class="container-fluid">
+                <div class="nk-content-inner">
+                    <div class="nk-content-body">
+                        <div class="nk-block-head nk-block-head-sm">
+                            <div class="nk-block-between">
+                                <div class="nk-block-head-content">
+                                    <h3 class="nk-block-title page-title">Project Name</h3>
+                                    <div class="nk-block-des text-soft">
+                                        <p>Project Description</p>
+                                    </div>
+                                </div><!-- .nk-block-head-content -->
+                                <!-- <div class="nk-block-head-content">
+                                    <div class="toggle-wrap nk-block-tools-toggle">
+                                        <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                                        <div class="toggle-expand-content" data-content="pageMenu">
+                                            <ul class="nk-block-tools g-3">
+                                                <!-- <li><a href="#" class="btn btn-white btn-dim btn-outline-primary"><em class="icon ni ni-download-cloud"></em><span>Export</span></a></li>
+                                                <li><a href="#" class="btn btn-white btn-dim btn-outline-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
+                                                <li class="nk-block-tools-opt">
+                                                    <div class="drodown">
+                                                        <a href="#" class="dropdown-toggle btn btn-icon btn-primary" data-toggle="dropdown"><em class="icon ni ni-plus"></em></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <ul class="link-list-opt no-bdr">
+                                                                <li><a href="#"><em class="icon ni ni-user-add-fill"></em><span>Add User</span></a></li>
+                                                                <li><a href="#"><em class="icon ni ni-coin-alt-fill"></em><span>Add Order</span></a></li>
+                                                                <li><a href="#"><em class="icon ni ni-note-add-fill-c"></em><span>Add Page</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> --> <!-- .nk-block-head-content -->
+                            </div><!-- .nk-block-between -->
+                        </div><!-- .nk-block-head -->
+                        <div class="nk-block">
+                            <div class="row g-gs">
+                                <div class="col-lg-12">
+                                    <div class="card card-bordered h-100">
+                                        <div class="card-inner">
+                                            <div class="card-title-group align-start mb-3">
+                                                <div class="card-title">
+                                                    <h6 class="title">Time Progress %</h6>
+                                                </div>
+                                                <!-- <div class="card-tools mt-n1 mr-n1">
+                                                    <div class="drodown">
+                                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                                            <ul class="link-list-opt no-bdr">
+                                                                <li><a href="#" class="active"><span>15 Days</span></a></li>
+                                                                <li><a href="#"><span>30 Days</span></a></li>
+                                                                <li><a href="#"><span>3 Months</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                            </div><!-- .card-title-group -->
+                                            <div class="nk-order-ovwg">
+                                                <div class="row g-4 align-end">
+                                                    <div class="col-xxl-8">
+                                                        <div class="nk-order-ovwg-ck">
+                                                            <canvas class="order-overview-chart" id="orderOverview"></canvas>
+                                                        </div>
+                                                    </div><!-- .col -->
+                                                    <!-- <div class="col-xxl-4">
+                                                        <div class="row g-4">
+                                                            <div class="col-sm-6 col-xxl-12">
+                                                                <div class="nk-order-ovwg-data buy">
+                                                                    <div class="amount">12,954.63 <small class="currenct currency-usd">USD</small></div>
+                                                                    <div class="info">Last month <strong>39,485 <span class="currenct currency-usd">USD</span></strong></div>
+                                                                    <div class="title"><em class="icon ni ni-arrow-down-left"></em> Buy Orders</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 col-xxl-12">
+                                                                <div class="nk-order-ovwg-data sell">
+                                                                    <div class="amount">12,954.63 <small class="currenct currency-usd">USD</small></div>
+                                                                    <div class="info">Last month <strong>39,485 <span class="currenct currency-usd">USD</span></strong></div>
+                                                                    <div class="title"><em class="icon ni ni-arrow-up-left"></em> Sell Orders</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                    <!-- .col -->
+                                                </div>
+                                            </div><!-- .nk-order-ovwg -->
+                                        </div><!-- .card-inner -->
+                                    </div><!-- .card -->
+                                </div><!-- .col -->
+                                <div class="col-lg-4">
+
+                                </div><!-- .col -->
+                                <div class="col-lg-12">
+                                    <div class="card card-bordered card-full">
+                                        <div class="card-inner">
+                                            <div class="card-title-group">
+                                                <div class="card-title">
+                                                    <h6 class="title"><span class="mr-2">Escalated Issues/Risks</span> <a href="#" class="link d-none d-sm-inline">See History</a></h6>
+                                                </div>
+                                                <!-- <div class="card-tools">
+                                                    <ul class="card-tools-nav">
+                                                        <li><a href="#"><span>Buy</span></a></li>
+                                                        <li><a href="#"><span>Sell</span></a></li>
+                                                        <li class="active"><a href="#"><span>All</span></a></li>
+                                                    </ul>
+                                                </div> -->
+                                            </div>
+                                        </div><!-- .card-inner -->
+                                        <div class="card-inner p-0 border-top">
+                                            <div class="nk-tb-list nk-tb-orders">
+                                                <div class="nk-tb-item nk-tb-head">
+                                                    <div class="nk-tb-col nk-tb-orders-type"><span>Risk/Issue</span></div>
+                                                    <div class="nk-tb-col"><span>Date</span></div>
+                                                    <div class="nk-tb-col tb-col-sm"><span>Impact</span></div>
+                                                    <div class="nk-tb-col tb-col-xl"><span>Corrective Action</span></div>
+                                                    <div class="nk-tb-col tb-col-xl"><span>Owner</span></div>
+                                                    <div class="nk-tb-col tb-col-sm text-right"><span>Status</span></div>
+                                                    <!-- <div class="nk-tb-col text-right"><span>Amount</span></div> -->
+                                                </div><!-- .nk-tb-item -->
+                                                <div class="nk-tb-item">
+                                                    <div class="nk-tb-col nk-tb-orders-type">
+                                                        <span>عدم توفر تصاريح الأمانة</span>
+                                                    </div>
+                                                    <div class="nk-tb-col">
+                                                        <span class="tb-sub">02/01/2017</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm">
+                                                       <span class="tb-sub text-primary">توقف الأعمال في بنود التركيب</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span>تم تمديد مدة العقد للرياض وجدة ومكة المكرمة الى نهاية 2019</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span>NWC</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm text-right">
+                                                        <span class="tb-sub tb-amount">SOLVED</span>
+                                                    </div>
+                                                    <!-- <div class="nk-tb-col text-right">
+                                                        <span class="tb-sub tb-amount ">+ 0.2040 <span>BTC</span></span>
+                                                    </div> -->
+                                                </div><!-- .nk-tb-item -->
+                                                <div class="nk-tb-item">
+                                                    <div class="nk-tb-col nk-tb-orders-type">
+                                                        <ul class="icon-overlap">
+                                                            <li><em class="bg-eth-dim icon-circle icon ni ni-sign-eth"></em></li>
+                                                            <li><em class="bg-success-dim icon-circle icon ni ni-arrow-down-left"></em></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="nk-tb-col">
+                                                        <span class="tb-lead">Buy Ethereum</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm">
+                                                        <span class="tb-sub">02/10/2020</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub">10:37 PM</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub text-primary">RE2309232</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm text-right">
+                                                        <span class="tb-sub tb-amount">2,039.39 <span>USD</span></span>
+                                                    </div>
+                                                    <!-- <div class="nk-tb-col text-right">
+                                                        <span class="tb-sub tb-amount ">+ 0.12600 <span>BTC</span></span>
+                                                    </div> -->
+                                                </div><!-- .nk-tb-item -->
+                                                <div class="nk-tb-item">
+                                                    <div class="nk-tb-col nk-tb-orders-type">
+                                                        <ul class="icon-overlap">
+                                                            <li><em class="bg-btc-dim icon-circle icon ni ni-sign-btc"></em></li>
+                                                            <li><em class="bg-purple-dim icon-circle icon ni ni-arrow-up-right"></em></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="nk-tb-col">
+                                                        <span class="tb-lead">Sell Bitcoin</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm">
+                                                        <span class="tb-sub">02/10/2020</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub">10:45 PM</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub text-primary">RE2309232</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm text-right">
+                                                        <span class="tb-sub tb-amount">9,285.71 <span>USD</span></span>
+                                                    </div>
+                                                    <!-- <div class="nk-tb-col text-right">
+                                                        <span class="tb-sub tb-amount ">+ 0.94750 <span>BTC</span></span>
+                                                    </div> -->
+                                                </div><!-- .nk-tb-item -->
+                                                <div class="nk-tb-item">
+                                                    <div class="nk-tb-col nk-tb-orders-type">
+                                                        <ul class="icon-overlap">
+                                                            <li><em class="bg-eth-dim icon-circle icon ni ni-sign-eth"></em></li>
+                                                            <li><em class="bg-purple-dim icon-circle icon ni ni-arrow-up-right"></em></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="nk-tb-col">
+                                                        <span class="tb-lead">Sell Etherum</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm">
+                                                        <span class="tb-sub">02/11/2020</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub">10:25 PM</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub text-primary">RE2309232</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm text-right">
+                                                        <span class="tb-sub tb-amount">12,596.75 <span>USD</span></span>
+                                                    </div>
+                                                    <!-- <div class="nk-tb-col text-right">
+                                                        <span class="tb-sub tb-amount ">+ 1.02050 <span>BTC</span></span>
+                                                    </div> -->
+                                                </div><!-- .nk-tb-item -->
+                                                <div class="nk-tb-item">
+                                                    <div class="nk-tb-col nk-tb-orders-type">
+                                                        <ul class="icon-overlap">
+                                                            <li><em class="bg-btc-dim icon-circle icon ni ni-sign-btc"></em></li>
+                                                            <li><em class="bg-success-dim icon-circle icon ni ni-arrow-down-left"></em></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="nk-tb-col">
+                                                        <span class="tb-lead">Buy Bitcoin</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm">
+                                                        <span class="tb-sub">02/10/2020</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub">10:12 PM</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub text-primary">RE2309232</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm text-right">
+                                                        <span class="tb-sub tb-amount">400.00 <span>USD</span></span>
+                                                    </div>
+                                                    <!-- <div class="nk-tb-col text-right">
+                                                        <span class="tb-sub tb-amount ">+ 0.00056 <span>BTC</span></span>
+                                                    </div> -->
+                                                </div><!-- .nk-tb-item -->
+                                                <div class="nk-tb-item">
+                                                    <div class="nk-tb-col nk-tb-orders-type">
+                                                        <ul class="icon-overlap">
+                                                            <li><em class="bg-eth-dim icon-circle icon ni ni-sign-eth"></em></li>
+                                                            <li><em class="bg-purple-dim icon-circle icon ni ni-arrow-up-right"></em></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="nk-tb-col">
+                                                        <span class="tb-lead">Sell Etherum</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm">
+                                                        <span class="tb-sub">02/09/2020</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub">05:15 PM</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-xl">
+                                                        <span class="tb-sub text-primary">RE2309232</span>
+                                                    </div>
+                                                    <div class="nk-tb-col tb-col-sm text-right">
+                                                        <span class="tb-sub tb-amount">6,246.50 <span>USD</span></span>
+                                                    </div>
+                                                    <!-- <div class="nk-tb-col text-right">
+                                                        <span class="tb-sub tb-amount ">+ 0.02575 <span>BTC</span></span>
+                                                    </div> -->
+                                                </div><!-- .nk-tb-item -->
+                                            </div>
+                                        </div><!-- .card-inner -->
+                                        <div class="card-inner-sm border-top text-center d-sm-none">
+                                            <a href="#" class="btn btn-link btn-block">See History</a>
+                                        </div><!-- .card-inner -->
+                                    </div><!-- .card -->
+                                </div><!-- .col -->
+                                <div class="col-lg-4">
+                                    <div class="row g-gs">
+                                        <div class="col-md-6 col-lg-12">
+
+                                        </div><!-- .col -->
+                                        <div class="col-md-6 col-lg-12">
+
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- .col -->
+                            </div><!-- .row -->
+                        </div><!-- .nk-block -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content @e -->
+        <!-- footer @s -->
+        <!-- <div class="nk-footer">
+            <div class="container-fluid">
+                <div class="nk-footer-wrap">
+                    <div class="nk-footer-copyright"> &copy; 2022 DashLite. Template by <a href="https://softnio.com" target="_blank">Softnio</a>
+                    </div>
+                    <div class="nk-footer-links">
+                        <ul class="nav nav-sm">
+                            <li class="nav-item dropup">
+                                <a herf="#" class="dropdown-toggle dropdown-indicator has-indicator nav-link" data-toggle="dropdown" data-offset="0,10"><span>English</span></a>
+                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                    <ul class="language-list">
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <span class="language-name">English</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <span class="language-name">Español</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <span class="language-name">Français</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="language-item">
+                                                <span class="language-name">Türkçe</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" data-toggle="modal" data-target="#region" class="nav-link"><em class="icon ni ni-globe"></em><span class="ml-1">Select Region</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- footer @e -->
+    </div>
+    <!-- wrap @e -->
+</div>
+<!-- main @e -->
+</div>
+
