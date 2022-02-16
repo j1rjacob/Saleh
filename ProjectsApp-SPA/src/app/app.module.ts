@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { ValuesComponent } from './values/values.component';
+import { TimeProgressComponent } from './TimeProgress/TimeProgress.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
-      ValuesComponent
+      ValuesComponent,
+      TimeProgressComponent
    ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
