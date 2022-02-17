@@ -9,14 +9,16 @@ import { ValuesComponent } from './values/values.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddprojectComponent } from './addproject/addproject.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       ValuesComponent,
       LoginComponent,
       RegisterComponent,
-      DashboardComponent
+      DashboardComponent,
+      AddprojectComponent
    ],
   imports: [
     BrowserModule,
