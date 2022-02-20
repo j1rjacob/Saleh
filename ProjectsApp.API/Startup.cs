@@ -34,6 +34,7 @@ namespace ProjectsApp.API
             services.AddCors();
             services.AddAutoMapper();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IProject, ProjectRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectsApp.API", Version = "v1" });

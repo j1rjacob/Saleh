@@ -9,7 +9,8 @@ namespace ProjectsApp.API.Helpers
         {
             CreateMap<User, UserForListDto>();
             CreateMap<User, UserForDetailedDto>();
-            CreateMap<UserForRegisterDto, User>();                       
+            CreateMap<UserForRegisterDto, User>();  
+            CreateMap<ProjectToAddDto,Project>();                     
         }
     }
 }
