@@ -32,5 +32,56 @@ public class ProjectController : ControllerBase
         return BadRequest("Failed to add project");        
     }
 
+    [HttpPost("addinvoice")]
+    public async Task<IActionResult> AddInvoice(InvoiceToAddDto invoiceToAddDto)
+    { 
+        var invoiceToAdd = _mapper.Map<Invoice>(invoiceToAddDto);
+
+        _repo.Add<Invoice>(invoiceToAdd);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to add invoice");        
+    }
+    
+    [HttpPost("addexecution")]
+    public async Task<IActionResult> AddExecution(ExecutionToAddDto executionToAddDto)
+    { 
+        var executionToAdd = _mapper.Map<Execution>(executionToAddDto);
+
+        _repo.Add<Execution>(executionToAdd);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to add execution");        
+    }
+
+    [HttpPost("addrisk")]
+    public async Task<IActionResult> AddRisk(RiskToAddDto riskToAddDto)
+    { 
+        var riskToAdd = _mapper.Map<Risk>(riskToAddDto);
+
+        _repo.Add<Risk>(riskToAdd);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to add risk");        
+    }
+
+    [HttpPost("addexpense")]
+    public async Task<IActionResult> AddExpense(ExpenseToAddDto expenseToAddDto)
+    { 
+        var expenseToAdd = _mapper.Map<Expense>(expenseToAddDto);
+
+        _repo.Add<Expense>(expenseToAdd);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to add expense");        
+    }
 
 }
