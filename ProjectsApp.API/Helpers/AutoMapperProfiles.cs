@@ -14,7 +14,13 @@ namespace ProjectsApp.API.Helpers
             CreateMap<InvoiceToAddDto,Invoice>();    
             CreateMap<ExecutionToAddDto,Execution>();  
             CreateMap<RiskToAddDto,Risk>();     
-            CreateMap<ExpenseToAddDto,Expense>();      
+            CreateMap<ExpenseToAddDto,Expense>();     
+            CreateMap<ExpenseToDelDto,Expense>();  
+            CreateMap<ExpenseToUpdDto,Expense>();
+            CreateMap<RiskToUpdDto,Risk>();
+            CreateMap<ExecutionToUpdDto,Execution>();
+            CreateMap<InvoiceToUpdDto,Invoice>();   
+            CreateMap<ProjectToUpdDto,Project>();   
         }
     }
 }

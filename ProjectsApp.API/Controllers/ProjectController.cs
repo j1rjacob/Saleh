@@ -1,3 +1,5 @@
+using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -73,7 +75,7 @@ public class ProjectController : ControllerBase
 
     [HttpPost("addexpense")]
     public async Task<IActionResult> AddExpense(ExpenseToAddDto expenseToAddDto)
-    { 
+    {   
         var expenseToAdd = _mapper.Map<Expense>(expenseToAddDto);
 
         _repo.Add<Expense>(expenseToAdd);
@@ -83,5 +85,124 @@ public class ProjectController : ControllerBase
 
         return BadRequest("Failed to add expense");        
     }
+    
+    [HttpPost("{id}")]
+    public async Task<IActionResult> DeleteProject(int id)
+    {           
+        var projectToDel = await _repo.GetProject(id);
+        _repo.Delete<Project>(projectToDel);
+        
+        if (await _repo.SaveAll())
+            return Ok();
 
+        return BadRequest("Failed to delete project");        
+    }
+
+    [HttpPost("delinvoice")]
+    public async Task<IActionResult> DeleteInvoice(ExpenseToDelDto expenseToDelDto)
+    {           
+        var invoiceToDel = await _repo.GetInvoice(expenseToDelDto.ProjectId,expenseToDelDto.Id);
+        _repo.Delete<Invoice>(invoiceToDel);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to delete invoice");        
+    }
+
+    [HttpPost("delexecution")]
+    public async Task<IActionResult> DeleteExecution(ExpenseToDelDto expenseToDelDto)
+    {           
+        var exeToDel = await _repo.GetExecution(expenseToDelDto.ProjectId,expenseToDelDto.Id);
+        _repo.Delete<Execution>(exeToDel);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to delete execution");        
+    }
+
+    [HttpPost("delrisk")]
+    public async Task<IActionResult> DeleteRisk(ExpenseToDelDto expenseToDelDto)
+    {           
+        var riskToDel = await _repo.GetRisk(expenseToDelDto.ProjectId,expenseToDelDto.Id);
+        _repo.Delete<Risk>(riskToDel);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to delete risk");        
+    }
+
+    [HttpPost("delexpense")]
+    public async Task<IActionResult> DeleteExpense(ExpenseToDelDto expenseToDelDto)
+    {           
+        var expenseToDel = await _repo.GetExpense(expenseToDelDto.ProjectId,expenseToDelDto.Id);
+        _repo.Delete<Expense>(expenseToDel);
+        
+        if (await _repo.SaveAll())
+            return Ok();
+
+        return BadRequest("Failed to delete expense");        
+    }   
+
+    [HttpPut("updexpense")]
+    public async Task<IActionResult> UpdateExpense(ExpenseToUpdDto expenseToUpdDto)
+    {           
+        var expenseToUpd = await _repo.GetExpense(expenseToUpdDto.ProjectId,expenseToUpdDto.Id);
+        _mapper.Map(expenseToUpdDto, expenseToUpd);
+
+        if (await _repo.SaveAll())
+            return NoContent();
+
+        throw new Exception($"Updating expense failed on save");       
+    } 
+
+    [HttpPut("updrisk")]
+    public async Task<IActionResult> UpdateRisk(RiskToUpdDto riskToUpdDto)
+    {           
+        var riskToUpd = await _repo.GetRisk(riskToUpdDto.ProjectId,riskToUpdDto.Id);
+        _mapper.Map(riskToUpdDto, riskToUpd);
+
+        if (await _repo.SaveAll())
+            return NoContent();
+
+        throw new Exception($"Updating risk failed on save");       
+    }
+    
+    [HttpPut("updexecution")]
+    public async Task<IActionResult> UpdateExecution(ExecutionToUpdDto exeToUpdDto)
+    {           
+        var exeToUpd = await _repo.GetExecution(exeToUpdDto.ProjectId,exeToUpdDto.Id);
+        _mapper.Map(exeToUpdDto, exeToUpd);
+
+        if (await _repo.SaveAll())
+            return NoContent();
+
+        throw new Exception($"Updating execution failed on save");       
+    }
+    
+    [HttpPut("updinvoice")]
+    public async Task<IActionResult> UpdateInvoice(InvoiceToUpdDto invToUpdDto)
+    {           
+        var invToUpd = await _repo.GetInvoice(invToUpdDto.ProjectId,invToUpdDto.Id);
+        _mapper.Map(invToUpdDto, invToUpd);
+
+        if (await _repo.SaveAll())
+            return NoContent();
+
+        throw new Exception($"Updating invoice failed on save");       
+    }
+
+    [HttpPut()]
+    public async Task<IActionResult> UpdateProject(ProjectToUpdDto prjToUpdDto)
+    {           
+        var prjToUpd = await _repo.GetProject(prjToUpdDto.Id);
+        _mapper.Map(prjToUpdDto, prjToUpd);
+
+        if (await _repo.SaveAll())
+            return NoContent();
+
+        throw new Exception($"Updating project failed on save");       
+    }
 }
