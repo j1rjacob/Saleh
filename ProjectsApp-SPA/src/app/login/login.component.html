@@ -16,33 +16,33 @@
                                   </div>
                               </div>
                           </div>
-                          <form action="html/index.html">
+                          <form #loginForm="ngForm" (ngSubmit)="login()">
                               <div class="form-group">
                                   <div class="form-label-group">
                                       <label class="form-label" for="default-01">Username</label>
                                   </div>
                                   <div class="form-control-wrap">
-                                      <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username">
+                                      <input type="text" class="form-control form-control-lg" name="username" placeholder="Enter your email address or username" required [(ngModel)]="model.username">
                                   </div>
                               </div>
                               <div class="form-group">
                                   <div class="form-label-group">
                                       <label class="form-label" for="password">Passcode</label>
-                                      <a class="link link-primary link-sm" href="html/pages/auths/auth-reset-v2.html">Forgot Code?</a>
+                                      <a class="link link-primary link-sm" href="html/pages/auths/auth-reset-v2.html">Forgot Password?</a>
                                   </div>
                                   <div class="form-control-wrap">
                                       <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                           <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                           <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                       </a>
-                                      <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
+                                      <input type="password" class="form-control form-control-lg" name="password" placeholder="Enter your passcode" required [(ngModel)]="model.password">
                                   </div>
                               </div>
                               <div class="form-group">
-                                  <button class="btn btn-lg btn-primary btn-block">Sign in</button>
+                                  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                               </div>
                           </form>
-                          <div class="form-note-s2 text-center pt-4"> New on our platform? <a href="html/pages/auths/auth-register-v2.html">Create an account</a>
+                          <div class="form-note-s2 text-center pt-4"> New on our platform? <a [routerLink]="['/register']">Create an account</a>
                           </div>
 
                       </div>

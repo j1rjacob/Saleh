@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import {  Label  } from 'ng2-charts';
+import { AlertifyService } from '../_services/alertify.service';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -38,9 +41,18 @@ export class DashboardComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(public authService: AuthService, private alertify: AlertifyService,
+    private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.authService.currentUser = null;
+    this.authService.decodedToken = null;
+    this.router.navigate(['/login']);
   }
 
 }

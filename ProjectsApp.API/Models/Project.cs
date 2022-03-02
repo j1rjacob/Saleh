@@ -19,7 +19,7 @@ namespace ProjectsApp.API.Models
         public DateTime ProjectStartDate { get; set; }  
         public DateTime ProjectEndDate { get; set; }  
         public int ProjectPeriod { get; set; }   
-        public int RemainingPeriod { get; set; }
+        public int? RemainingPeriod { get; set; }
         public ICollection<Invoice> Invoices { get; set; }
         public ICollection<Execution> Executions { get; set; }
         public ICollection<Risk> Risks { get; set; }

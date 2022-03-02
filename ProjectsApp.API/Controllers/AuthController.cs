@@ -4,12 +4,14 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProjectsApp.API.Data;
 using ProjectsApp.API.Models;
 
+[AllowAnonymous]
 [Route("api/[controller]")]
 [ApiController]
 public class AuthController : ControllerBase 
@@ -43,7 +45,7 @@ public class AuthController : ControllerBase
              id = createdUser.Id }, userToReturn);
     }
 
-    [HttpPost("login")]
+    [HttpPost("login")] 
     public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
     {
         var userFromRepo = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
@@ -81,4 +83,7 @@ public class AuthController : ControllerBase
             user
         });
     }
+
+
+    
 }
