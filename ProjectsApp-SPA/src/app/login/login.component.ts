@@ -11,17 +11,18 @@ import { AuthService } from '../_services/auth.service';
 export class LoginComponent implements OnInit {
   model: any = {};
 
-  constructor(public authService: AuthService, private alertify: AlertifyService,
-    private router: Router) { }
+  constructor(public authService: AuthService,
+              private alertify: AlertifyService,
+              private router: Router) { }
 
   ngOnInit() {
   }
 
   login() {
     this.authService.login(this.model).subscribe(next => {
-      //this.alertify.success('Login Successfully');
+      this.alertify.success('Login Successfully');
     }, error => {
-      //this.alertify.error(error);
+      this.alertify.error(error);
     }, () => {
       this.router.navigate(['/dashboard']);
     });

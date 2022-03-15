@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
 import { Project } from '../_models/project';
 import { AlertifyService } from '../_services/alertify.service';
@@ -15,8 +16,10 @@ import { ProjectService } from '../_services/project.service';
 })
 
 export class AddprojectComponent implements OnInit {
+  @ViewChild('projectTabs', { static: false }) projectTabs?: TabsetComponent;
   project: Project;
   addProjectForm: FormGroup;
+  addRiskForm: FormGroup;
   bsConfig: Partial<BsDatepickerConfig>;
 
   constructor(public authService: AuthService,
@@ -26,12 +29,13 @@ export class AddprojectComponent implements OnInit {
               private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.createProjectForm();
+    this.createRiskForm();
     this.bsConfig = {
       containerClass: 'theme-blue',
       isAnimated: true,
       dateInputFormat: 'YYYY-MM-DD'
     };
-    this.createProjectForm();
   }
 
   createProjectForm() {
@@ -54,6 +58,18 @@ export class AddprojectComponent implements OnInit {
     });
   }
 
+  createRiskForm() {
+    this.addRiskForm = this.fb.group({
+     issue: ['', Validators.required],
+     riskdate: [null, Validators.required],
+     impact: ['', Validators.required],
+     email: ['', Validators.required],
+     correctiveaction: ['', Validators.required],
+     owner: ['', Validators.required],
+     status: ['', Validators.required]
+    });
+  }
+
   updateMyDate(newDate) {
     console.log(newDate);
   }
@@ -61,14 +77,32 @@ export class AddprojectComponent implements OnInit {
   saveproject() {
     this.project = Object.assign({}, this.addProjectForm.value);
     this.projectService.addProject(this.project).subscribe(next => {
-
-      //this.alertify.success('Login Successfully');
+      this.alertify.success('Login Successfully');
     }, error => {
-      //this.alertify.error(error);
+      this.alertify.error(error);
     }, () => {
       console.log(this.addProjectForm.value);
     });
     console.log(this.addProjectForm.value);
+  }
+
+  saverisk() {
+    this.project = Object.assign({}, this.addProjectForm.value);
+    this.projectService.addProject(this.project).subscribe(next => {
+
+      this.alertify.success('Login Successfully');
+    }, error => {
+      this.alertify.error(error);
+    }, () => {
+      console.log(this.addProjectForm.value);
+    });
+    console.log(this.addProjectForm.value);
+  }
+
+  selectTab(tabId: number) {
+    if (this.projectTabs?.tabs[tabId]) {
+      this.projectTabs.tabs[tabId].active = true;
+    }
   }
 
   logout() {

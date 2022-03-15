@@ -1,4 +1,4 @@
-<div class="nk-app-root">
+<div *ngIf="!loggedIn()" class="nk-app-root">
   <!-- main @s -->
   <div class="nk-main ">
       <!-- wrap @s -->
@@ -44,11 +44,9 @@
                           </form>
                           <div class="form-note-s2 text-center pt-4"> New on our platform? <a [routerLink]="['/register']">Create an account</a>
                           </div>
-
                       </div>
                   </div>
               </div>
-
           </div>
           <!-- wrap @e -->
       </div>

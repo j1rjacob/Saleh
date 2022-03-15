@@ -20,6 +20,8 @@ import { AlertifyService } from './_services/alertify.service';
 import { ProjectService } from './_services/project.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { MytabsComponent } from './mytabs/mytabs.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -32,7 +34,8 @@ export function tokenGetter() {
       LoginComponent,
       RegisterComponent,
       DashboardComponent,
-      AddprojectComponent
+      AddprojectComponent,
+      MytabsComponent
    ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ export function tokenGetter() {
       }
     }),
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    TabsModule.forRoot()
   ],
   providers: [
     AuthService,
